@@ -11,6 +11,10 @@
   --color-secondary-light: #b870d3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .darker {
   color: var(--color-secondary-dark);
 }
@@ -142,11 +146,14 @@ body {
 }
 
 .secao-02-texts {
-  margin-left: 1rem;
-  margin-top: 2rem;
+  margin: 2rem;
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
+}
+
+.under {
+  text-decoration: underline;
 }
 
 .secao-02-texts p {
@@ -343,10 +350,13 @@ body {
 
 /* FORMULÁRIO */
 
+#secao-05 {
+  padding-top: 2rem;
+}
+
 .logo-form {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -356,9 +366,11 @@ body {
 
 .texto-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+  gap: 2rem;
 }
 
 .texto-form h2 {
@@ -366,6 +378,158 @@ body {
   text-align: center;
   width: 85%;
   color: var(--color-secondary-dark);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9a5ab1;
+  color: var(--color-background);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 80%;
+  gap: 2rem;
+  box-shadow: 1px 1px 23px 0px rgba(131, 70, 154, 0.92);
+  -webkit-box-shadow: 1px 1px 23px 0px rgba(131, 70, 154, 0.92);
+  -moz-box-shadow: 1px 1px 23px 0px rgba(131, 70, 154, 0.92);
+}
+
+.form h3 {
+  font-size: 30px;
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 90%;
+  font-size: 20px;
+}
+
+.secao-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input,
+select {
+  background-color: var(--color-background);
+  color: var(--color-secondary-dark);
+  border: 2px solid var(--color-secondary-dark);
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.opcao {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.opcao input {
+  display: none;
+}
+
+.opcao span {
+  display: block;
+  background-color: #f8ebff;
+  color: var(--color-secondary-dark);
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.opcao:focus-visible {
+  outline: none;
+}
+
+.opcao input:checked + span {
+  background-color: #6c3483;
+  color: var(--color-background);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.form-btn {
+  background-color: var(--color-background);
+  color: var(--color-secondary-dark);
+  padding: 1rem;
+  border: 2px solid var(--color-secondary-dark);
+  border-radius: 10px;
+  font-size: 20px;
+  width: 80%;
+}
+
+input::placeholder {
+  color: var(--color-secondary-dark);
+}
+
+.check-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+/* Oculta a checkbox padrão */
+.toggle-input {
+  display: none;
+}
+
+/* Estiliza o label */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+  font-size: 14px;
+}
+
+/* Trilho do switch */
+.toggle-switch {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background-color: var(--color-background);
+  border-radius: 34px;
+  transition: background-color 0.3s;
+}
+
+/* Círculo dentro do switch */
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: var(--color-secondary-dark);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* Quando marcado */
+.toggle-input:checked + .toggle-label .toggle-switch {
+  background-color: var(--color-primary-light); /* Cor quando ativo */
+}
+
+.toggle-input:checked + .toggle-label .toggle-switch::before {
+  transform: translateX(13px); /* Move a bolinha */
 }
 
 /* Tablets (até 768px) */
