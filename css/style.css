@@ -29,6 +29,10 @@ html {
   border-radius: 2px;
 }
 
+.img-pc {
+  display: none;
+}
+
 /* botão */
 
 .alt {
@@ -246,16 +250,13 @@ body {
 
 .secao-03 {
   background-image: url(../images/noise-fx.png);
-  padding: 1rem;
   padding-bottom: 2rem;
-}
-
-.img-secao03 {
-  background: linear-gradient(to bottom, #fecee5 10%, #ad67c7 10%);
 }
 
 .img-secao03 img {
   width: 100%;
+  object-fit: cover;
+  height: 800px;
 }
 
 .chamada-03 {
@@ -270,6 +271,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-left: 2rem;
 }
 
 /* ícones s03 */
@@ -486,12 +488,10 @@ input::placeholder {
   margin-top: 1rem;
 }
 
-/* Oculta a checkbox padrão */
 .toggle-input {
   display: none;
 }
 
-/* Estiliza o label */
 .toggle-label {
   display: flex;
   align-items: center;
@@ -500,7 +500,6 @@ input::placeholder {
   font-size: 14px;
 }
 
-/* Trilho do switch */
 .toggle-switch {
   position: relative;
   width: 70px;
@@ -510,7 +509,6 @@ input::placeholder {
   transition: background-color 0.3s;
 }
 
-/* Círculo dentro do switch */
 .toggle-switch::before {
   content: "";
   position: absolute;
@@ -523,19 +521,233 @@ input::placeholder {
   transition: transform 0.3s;
 }
 
-/* Quando marcado */
 .toggle-input:checked + .toggle-label .toggle-switch {
-  background-color: var(--color-primary-light); /* Cor quando ativo */
+  background-color: var(--color-primary-light);
 }
 
 .toggle-input:checked + .toggle-label .toggle-switch::before {
-  transform: translateX(13px); /* Move a bolinha */
+  transform: translateX(13px);
 }
 
 /* Tablets (até 768px) */
 @media (min-width: 768px) {
+  .slogan h1 {
+    font-size: 50px;
+  }
+
+  .slogan-alt {
+    font-size: 60px;
+  }
+
+  .slogan h2 {
+    font-size: 20px;
+  }
+
+  .cta-text h3 {
+    font-size: 22px;
+  }
+
+  .img-secao03 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .chamada-03 h3 {
+    font-size: 40px;
+  }
+
+  .conteudo-sec03 {
+    gap: 3rem;
+  }
+
+  .icone p {
+    font-size: 26px;
+  }
+
+  .chamada-04 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .toggle-input:checked + .toggle-label .toggle-switch::before {
+    transform: translateX(40px);
+  }
 }
 
 /* Laptops (até 1024px) */
 @media (min-width: 1024px) {
+  .header {
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .seja-pioneira {
+    padding: 25px;
+    font-size: 20px;
+  }
+
+  .container-principal {
+    flex-direction: row;
+  }
+
+  .figura {
+    height: auto;
+  }
+
+  .figura-principal {
+    width: 600px;
+  }
+
+  .container-slogan {
+    margin-top: 0;
+    margin-left: 2rem;
+    align-items: normal;
+    gap: 2rem;
+  }
+
+  .slogan {
+    align-items: normal;
+  }
+
+  .slogan h1 {
+    font-size: 80px;
+  }
+
+  .slogan-alt {
+    font-size: 94px;
+  }
+
+  .slogan h2 {
+    font-size: 28px;
+  }
+
+  .cta-text h3 {
+    text-align: unset;
+    font-size: 30px;
+  }
+
+  .container-baloes {
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 2rem;
+  }
+
+  .balao {
+    max-width: 600px;
+    min-width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+  }
+
+  .b1 img {
+    width: 370px;
+    bottom: -19px;
+    left: -150px;
+  }
+
+  .secao-02 h2 {
+    font-size: 46px;
+    margin-top: 2rem;
+  }
+
+  .secao-02-texts {
+    justify-content: flex-end;
+    display: block;
+  }
+
+  .secao-02-texts p {
+    width: 70%;
+    font-size: 28px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .b1 p,
+  .b2 p {
+    letter-spacing: 1px;
+  }
+
+  .container-secao02 {
+    display: flex;
+    margin-top: 3rem;
+  }
+
+  .cta-text-02 {
+    margin-top: 4rem;
+  }
+
+  .cta-text-02 p {
+    font-size: 30px;
+  }
+
+  .cta-btn {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .secao-03 {
+    padding: 0;
+  }
+
+  .img-secao03 {
+    background: transparent;
+  }
+
+  .img-pc {
+    display: flex;
+  }
+
+  .img-cel {
+    display: none;
+  }
+
+  .secao-03 {
+    display: flex;
+  }
+
+  .conteudo-sec03 {
+    background-color: #3e254757;
+    margin-left: 0;
+    padding-left: 2rem;
+    width: 70%;
+  }
+
+  .container-c3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .icone {
+    flex-direction: column;
+    max-width: 200px;
+    flex-basis: calc(33.333% - 1rem);
+  }
+
+  .icone p {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .icone img {
+    width: 150px;
+  }
+
+  .chamada-03 h3 {
+    font-size: 48px;
+  }
+
+  .secao-05 {
+    display: flex;
+  }
+
+  .sidectn-form {
+  }
 }
