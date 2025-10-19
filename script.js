@@ -41,9 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
       mode: "no-cors",
     })
       .then((response) => {
-        // Não conseguimos ler a resposta, mas assumimos sucesso
         status.innerHTML =
-          "Obrigada pelo interesse em fazer parte do BoraMiga! Nós avisaremos quando o app for lançado. 🚀";
+          "PRÉ-CADASTRO COMPLETO! <br> Obrigada por fazer parte do BoraMiga! Nós avisaremos quando o app for lançado. 🚀";
         status.style.color = "#FCF4FF";
         form.reset();
       })
