@@ -578,6 +578,7 @@ input::placeholder {
 
 .footer-mobile {
   display: flex;
+  width: 100%;
 }
 
 .ctn-footer {
