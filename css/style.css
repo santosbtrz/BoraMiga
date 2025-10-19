@@ -448,7 +448,7 @@ form {
   width: 200px;
 }
 
-form input,
+form input:not(.custom-check-input),
 select {
   background-color: var(--color-background);
   color: var(--color-secondary-dark);
