@@ -514,31 +514,31 @@ input::placeholder {
 }
 
 .check-form {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
+  display: flex !important;
+  align-items: center !important;
+  margin-top: 1rem !important;
 }
 
 .custom-check-input {
-  display: none;
+  display: none !important;
 }
 
 .custom-check-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  gap: 0.5rem;
+  display: flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  gap: 0.5rem !important;
   font-size: 14px;
 }
 
 .custom-checkbox-box {
-  position: relative;
+  position: relative !important;
   width: 30px;
   height: 25px;
   background-color: var(--color-background);
   border: 2px solid var(--color-secondary-dark);
-  border-radius: 4px;
-  transition: background-color 0.2s, border-color 0.2s;
+  border-radius: 4px !important;
+  transition: background-color 0.2s, border-color 0.2s !important;
 }
 
 .custom-checkbox-box::after {
